@@ -20,3 +20,7 @@ Route::get('/tracy', function () {
     throw new\Exception('Tracyworks!');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
