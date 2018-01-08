@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\CheckAge;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware(CheckAge::class);
 
 
 Route::get('/tracy', function () {
